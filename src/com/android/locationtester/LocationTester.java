@@ -177,7 +177,13 @@ public class LocationTester extends Activity {
 		    //
 		    double latitude = location.getLatitude();
 		    double longitude = location.getLongitude();
-		   
+
+		    String strLat = location.convert(latitude, Location.FORMAT_SECONDS);
+		    String strLong = location.convert(longitude, Location.FORMAT_SECONDS);
+		    Log.i(TAG, "lat: " + strLat);
+		    Log.i(TAG, "long: " + strLong);
+		    log("long: " + strLong + " lat: " + strLat);
+
 		    if (location.hasAccuracy()) {
 			   float accuracy = location.getAccuracy();
 			   Log.i(TAG, "accuracy = " + accuracy);
